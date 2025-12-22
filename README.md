@@ -8,19 +8,19 @@ vision-based interaction, expressive motion, and embedded system control.
 
 
 ## Current Focus
-The current phase focuses on the design and implementation of a **3DOF servo-driven head
-mechanism** intended for expressive motion.
+The current phase focuses on the design and implementation of a 3DOF servo-driven head
+mechanism intended for expressive motion.
 
-The **3DOF mechanical design is completed**, and work is currently in progress on
-**ESP32-based servo control and gesture implementation**.
+The 3DOF mechanical design is completed, and work is currently in progress on
+ESP32-based servo control and gesture implementation.
 
 
 
 ## 3DOF Head Mechanism
 The head mechanism provides three degrees of freedom:
-- **Yaw** – left / right rotation
-- **Pitch** – up / down movement
-- **Roll** – tilt for expressive motion
+- Yaw – left / right rotation
+- Pitch – up / down movement
+- Roll – tilt for expressive motion
 
 ## Design Notes
 - Designed for MG90S micro servos
@@ -32,18 +32,18 @@ Mechanical design files are available in the `mechanical/` directory.
 
 
 ## Development Phases
-- **Phase 1 (Completed):** 3DOF mechanical head design
-- **Phase 2 (Current):** ESP32-based servo control and serial motion protocol
-- **Phase 3 (Planned):** Face detection and recognition (OpenCV)
-- **Phase 4 (Planned):** Voice interaction and notification features
+- Phase 1 (Completed): 3DOF mechanical head design
+- Phase 2 (Current): ESP32-based servo control and serial motion protocol
+- Phase 3 (Planned): Face detection and recognition (OpenCV)
+- Phase 4 (Planned): Voice interaction and notification features
 
 
 
 ## Planned System Architecture
-- **Raspberry Pi:** vision, audio processing, high-level logic
-- **ESP32:** real-time servo control
-- **Camera:** human detection and recognition
-- **Display:** animated visual expressions
+- Raspberry Pi: vision, audio processing, high-level logic
+- ESP32: real-time servo control
+- Camera: human detection and recognition
+- Display: animated visual expressions
 
 
 
