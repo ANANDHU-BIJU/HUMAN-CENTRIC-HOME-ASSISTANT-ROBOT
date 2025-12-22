@@ -4,7 +4,7 @@
 
 This project is an ongoing development of an intelligent and interactive home assistant robot.
 The goal is to build a human-aware robotic assistant using Raspberry Pi and ESP32, capable of
-vision-based interaction, expressive motion, and embedded system control.
+vision-based interaction, expressive motion, and embedded system integration.
 
 
 ## Current Focus
