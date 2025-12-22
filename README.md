@@ -37,7 +37,7 @@ Mechanical design files are available in the `mechanical/` directory.
 - **Phase 3 (Planned):** Face detection and recognition (OpenCV)
 - **Phase 4 (Planned):** Voice interaction and notification features
 
----
+
 
 ## Planned System Architecture
 - **Raspberry Pi:** vision, audio processing, high-level logic
@@ -45,7 +45,7 @@ Mechanical design files are available in the `mechanical/` directory.
 - **Camera:** human detection and recognition
 - **Display:** animated visual expressions
 
----
+
 
 ## Notes
 This repository represents an early-stage hardware and embedded systems project.
