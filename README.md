@@ -1,4 +1,4 @@
-# INTELLIGENT & INTERACTIVE HOME ASSISTANT ROBOT
+# HUMAN-CENTRIC HOME ASSISTANT
 
 > Work in Progress – Early Development Stage
 
