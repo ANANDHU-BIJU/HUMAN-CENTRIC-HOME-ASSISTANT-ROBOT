@@ -54,6 +54,3 @@ The design supports a modular embedded system intended for **prototyping, testin
 This circuit and PCB are part of an **academic, learning-oriented embedded systems project** and are **not intended for commercial or safety-critical applications**.
 
 
-
-
-Say the word.
