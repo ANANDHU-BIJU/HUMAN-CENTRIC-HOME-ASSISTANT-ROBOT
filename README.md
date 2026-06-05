@@ -1,58 +1,117 @@
-# HUMAN-CENTRIC HOME ASSISTANT  
-**Work in Progress — Early Development Stage**
+# EVA — Human Centered Embodied Home Assistant 🤖
 
-This repository documents the ongoing development of a **human-centric home assistant robot**, focused on building a **human-aware, interactive embedded system** using **Raspberry Pi and ESP32**.
+> Voice-activated home assistant robot with face recognition, radar presence detection,
+> expressive head movement, and smart home automation.
+> 
+> 🥇 **First Place — INNOVIX, RISE 2026 | FISAT ECE Department**
 
-The project explores the integration of **vision-based interaction, expressive motion, and embedded system design**, with an emphasis on modular development and resource-constrained hardware.
+---
 
+## 🧠 What is EVA?
 
+EVA is a fully functional human-centric home assistant robot built on **Raspberry Pi 2 + ESP32**,
+designed to recognize users, navigate to them, and assist through natural voice interaction.
 
-## Current Focus
+Unlike conventional voice assistants, EVA physically moves to the user, verifies identity
+through face recognition, and responds with expressive animations — making interaction
+more natural and personal.
 
-The current development phase concentrates on the **design and control of a 3DOF servo-driven head mechanism** intended for expressive motion.
+---
 
-- 3DOF mechanical design: **completed**
-- ESP32-based servo control: **in progress**
-- Gesture and motion sequencing: **in progress**
+## ⚙️ System Architecture
 
+```
+┌─────────────────────────────────────────┐
+│         RASPBERRY PI 2 MODEL B          │
+│  Face Recognition · Voice · Navigation  │
+│  Intent Engine · Flask Web UI · Groq AI │
+└──────────────┬──────────────────────────┘
+               │ HTTP (WiFi)
+┌──────────────▼──────────────────────────┐
+│              ESP32 WROOM-32             │
+│  Motors · Servos · TFT · Radar · Face  │
+└──────────────────────────────────────────┘
+               │ HTTP (WiFi)
+┌──────────────▼──────────────────────────┐
+│            ESP8266 NodeMCU              │
+│     Garden Relay · Light Control        │
+└──────────────────────────────────────────┘
+```
 
+---
 
-## 3DOF Head Mechanism
+## 🔧 Features
 
-The head mechanism provides three degrees of freedom:
+| Feature | Details |
+|---------|---------|
+| 🎙️ Wake Word | Porcupine — "Hey Eva" |
+| 👁️ Face Recognition | OpenCV — Haar + LBPH |
+| 📡 Presence Detection | LD2410 mmWave Radar |
+| 😊 Face Display | ST7735R TFT — 6 bitmap expressions |
+| 🤖 3-DoF Head | MG90S servos — Yaw · Pitch · Roll |
+| 🚗 Navigation | TB6612FNG + N25 gear motors |
+| 🏠 Home Automation | ESP8266 relay — pump + lights |
+| 🧠 AI Conversation | Groq LLM (Llama 3) |
+| 🌐 Web UI | Flask dashboard — auth + controls |
+| 🔌 Custom PCB | KiCad 9.0.5 — full system integration |
+| 🖨️ Body | 3D printed enclosure (PLA) |
 
-- **Yaw** – left/right rotation  
-- **Pitch** – up/down movement  
-- **Roll** – tilt for expressive motion  
+---
 
-### Design Notes
-- Designed for **MG90S micro servos**
-- Optimized for **3D printing (PLA)**
-- Independent yaw, pitch, and roll axes
-- Intended for expressive motion (non load-bearing)
+## 🛠️ Hardware
 
-Mechanical design files are available in the `mechanical/` directory.
+- Raspberry Pi 2 Model B
+- ESP32 WROOM-32 DevKit
+- ESP8266 NodeMCU
+- Pi Camera Module V2 (NoIR)
+- ST7735R TFT Display
+- HLK-LD24 mmWave Radar
+- TB6612FNG Motor Driver
+- N25 Metal Gear Motors × 2
+- MG90S Servo Motors × 3
+- PAM8403 Audio Amplifier
+- Custom PCB (KiCad 9.0.5)
+- 2S Li-ion Battery (7.4V)
 
+---
 
+## 💻 Software Stack
 
-## Development Phases
+```python
+stack = {
+    "Pi"      : ["Python 3", "OpenCV", "Porcupine", "Flask",
+                 "edge-TTS", "Google STT", "Groq LLM"],
+    "ESP32"   : ["Arduino C++", "WebServer", "SPI", "LEDC PWM"],
+    "ESP8266" : ["Arduino C++", "ESP8266WebServer"],
+    "PCB"     : ["KiCad 9.0.5"],
+    "Body"    : ["Fusion 360", "3D Printing (PLA)"],
+}
+```
 
-- **Phase 1 (Completed):** 3DOF mechanical head design  
-- **Phase 2 (Current):** ESP32-based servo control and serial motion protocol  
-- **Phase 3 (Planned):** Face detection and recognition (OpenCV)  
-- **Phase 4 (Planned):** Voice interaction and notification features  
+---
 
+## 📁 Repository Structure
 
+```
+eva/
+├── firmware/
+│   ├── eva_esp32/          # ESP32 Arduino firmware
+│   └── eva_esp8266/        # ESP8266 garden controller
+├── pi/
+│   └── eva_assistant.py    # Main Raspberry Pi assistant
+├── mechanical/             # 3D design files (Fusion 360 / STL)
+├── pcb/                    # KiCad schematic and PCB layout
+├── faces/                  # Training images (not tracked)
+└── docs/                   # Report and documentation
+```
 
-## Planned System Architecture
+---
 
-- **Raspberry Pi:** vision processing, audio handling, high-level logic  
-- **ESP32:** real-time servo and motion control  
-- **Camera:** human detection and recognition  
-- **Display:** animated visual expressions  
+## 📬 Contact
 
+[![GitHub](https://img.shields.io/badge/GitHub-ANANDHU--BIJU-181717?style=for-the-badge&logo=github)](https://github.com/ANANDHU-BIJU)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anandhu%20Biju-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/anandhu-biju)
 
+---
 
-
-This repository represents an **early-stage embedded systems and robotics project**.  
-Features are developed **incrementally** as part of a structured learning, testing, and prototyping process.
+<p align="center"><i>Built with curiosity. Powered by embedded silicon. Driven by the need to build things that actually work.</i></p>
