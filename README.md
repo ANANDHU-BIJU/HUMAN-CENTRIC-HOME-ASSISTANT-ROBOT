@@ -90,22 +90,6 @@ stack = {
 
 ---
 
-## 📁 Repository Structure
-
-```
-eva/
-├── firmware/
-│   ├── eva_esp32/          # ESP32 Arduino firmware
-│   └── eva_esp8266/        # ESP8266 garden controller
-├── pi/
-│   └── eva_assistant.py    # Main Raspberry Pi assistant
-├── mechanical/             # 3D design files (Fusion 360 / STL)
-├── pcb/                    # KiCad schematic and PCB layout
-├── faces/                  # Training images (not tracked)
-└── docs/                   # Report and documentation
-```
-
----
 
 ## 📬 Contact
 
